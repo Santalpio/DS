@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ExerciciDos {
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		int num, unid, dezena, cent, nInvert;
+		
+		System.out.println("Insira o número solicitado:");
+		num=in.nextInt();
+		
+		unid=num/100;
+		dezena=(num-unid*100)/10*10;
+		cent=(num-unid*100-dezena)*100;
+		
+		nInvert=unid+dezena+cent;
+		
+		System.out.println("O número invertido é: "+nInvert);
+		
+		
+		in.close();
+	}
+
+}
