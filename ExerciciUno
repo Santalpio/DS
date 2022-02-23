@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ExerciciUno {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		
+		double horaAula, desc, salario, salarioLiquido;
+		int numAula;
+		
+		System.out.println("Insira aqui a quantidade de aulas:");
+		numAula=in.nextInt();
+		
+		System.out.println("Insira aqui o valor do horário da aula:");
+		horaAula=in.nextDouble();
+		
+		System.out.println("Insira aqui o percentual de desconto do INSS:");
+		desc=in.nextDouble();
+		
+		salario=numAula*horaAula;
+		salarioLiquido=salario-(salario/100*desc);
+		
+		System.out.printf("O valor do salário líquido é: R$%.2f", salarioLiquido);
+		
+		in.close();
+	}
+
+}
