@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class ExerciciunoDos {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		double horaAula, desc, salario, salarioLiquido;
+		int numAula;
+		
+		System.out.println("Insira aqui a quantidade de aulas:");
+		numAula=in.nextInt();
+		
+		System.out.println("Insira aqui o valor do horário da aula:");
+		horaAula=in.nextDouble();
+		
+		salario=numAula*horaAula;
+		
+		if(salario<=1212.00) {
+			desc=7.5;
+		}else if(salario<=2427.35) {
+			desc=9;
+		}else if(salario<=3641.03) {
+			desc=12;
+		}else if(salario<=7087.22) {
+			desc=14;
+		}else if(salario<=12136.79) {
+			desc=14.5;
+		}else if(salario<=24273.57) {
+			desc=16.5;
+		}else if(salario<=47333.46) {
+			desc=19;
+		}else {
+			desc=22;
+		}
+		
+		salarioLiquido=salario-(salario/100*desc);
+		
+		System.out.printf("O valor do salário líquido é: R$%.2f", salarioLiquido);
+		
+		in.close();
+	}
+
+}
+
+
