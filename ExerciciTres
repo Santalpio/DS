@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class ExerciciTrees {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		
+		double preco, margLucro, precoVenda;
+		int resposta;
+		
+		
+		do {
+			System.out.println("Digite aqui o preço:");
+			preco=in.nextDouble();
+			
+			System.out.println("Digite aqui a margem lucrativa:");
+			margLucro=in.nextDouble();
+			
+			precoVenda=preco+(preco/100*margLucro);
+			System.out.printf("O preço da venda correspondente é: R$%.2f\n", precoVenda);
+			
+			System.out.println("\nExecutar o programa mais uma vez?");
+			
+			System.out.println("1-Sim\n2-Não");
+			resposta=in.nextInt();
+		}while (resposta==1);
+		
+		in.close();
+		}
+}
